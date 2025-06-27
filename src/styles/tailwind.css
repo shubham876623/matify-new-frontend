@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #272727;
+    --primary-foreground: #ffffff;
+    --primary-light: #404040;
+    --primary-dark: #1a1a1a;
+
+    /* Secondary Colors */
+    --secondary-background: #ffffff;
+    --secondary-foreground: #272727;
+    --secondary-light: #f9fafb;
+    --secondary-dark: #f5f6f6;
+
+    /* Accent Colors */
+    --accent-color: #1cc26a;
+    --accent-foreground: #ffffff;
+    --accent-light: #50d890;
+    --accent-dark: #16a05a;
+
+    /* Border Colors */
+    --border-primary: #e4e4e4;
+    --border-secondary: #f8f8f8;
+    --border-light: #ececec;
+    --border-dark: #909090;
+
+    /* Text Colors */
+    --text-primary: #272727;
+    --text-secondary: #787878;
+    --text-muted: #a1a1a1;
+    --text-disabled: #949494;
+  }
+}
+
+@layer utilities {
+  /* Background Color Utilities */
+  .bg-primary-dark {
+    background-color: var(--primary-background);
+  }
+
+  .bg-primary-light {
+    background-color: var(--primary-light);
+  }
+
+  .bg-secondary-white {
+    background-color: var(--secondary-background);
+  }
+
+  .bg-secondary-light {
+    background-color: var(--secondary-light);
+  }
+
+  .bg-secondary-dark {
+    background-color: var(--secondary-dark);
+  }
+
+  .bg-accent {
+    background-color: var(--accent-color);
+  }
+
+  .bg-accent-light {
+    background-color: var(--accent-light);
+  }
+
+  .bg-accent-dark {
+    background-color: var(--accent-dark);
+  }
+
+  /* Text Color Utilities */
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-disabled {
+    color: var(--text-disabled);
+  }
+
+  /* Border Color Utilities */
+  .border-primary {
+    border-color: var(--border-primary);
+  }
+
+  .border-secondary {
+    border-color: var(--border-secondary);
+  }
+
+  .border-light {
+    border-color: var(--border-light);
+  }
+
+  .border-dark {
+    border-color: var(--border-dark);
+  }
+  .dynamic-max-width {
+    max-width: clamp(400px, calc(400px + ((100vh - 700px) / 20) * 10), 800px);
+  }
+}
